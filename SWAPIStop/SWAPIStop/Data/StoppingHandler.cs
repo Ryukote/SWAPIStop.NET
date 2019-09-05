@@ -1,12 +1,14 @@
 ﻿using SWAPIStop.Constants;
+using SWAPIStop.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace SWAPIStop.Data
 {
     public class StoppingHandler
     {
-        private string NormalizePeriodName(string period)
+        public string NormalizePeriodName(string period)
         {
             return char.ToUpper(period[0]) + period.Substring(1);
         }
@@ -34,6 +36,20 @@ namespace SWAPIStop.Data
         public int NumberOfStops(int input, int mglt, int consumables)
         {
             return (int) Math.Truncate((decimal)(input / mglt / 24 / consumables));
+        }
+
+        public void DisplayStops(int input, List<Starship> collection)
+        {
+            foreach(var item in collection)
+            {
+                if(item.Consumables != "unknown" && item.MGLT != "unknown")
+                {
+                    Console.WriteLine($"Starsip name: {item.Name}");
+                    var stops = NumberOfStops(input, Convert.ToInt32(item.MGLT), PeriodToDays(item.Consumables));
+                    Console.WriteLine($"Number of stops: {stops}");
+                    Console.WriteLine("-------------------------");
+                }
+            }
         }
     }
 }
