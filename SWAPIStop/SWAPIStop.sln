@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWAPIStop", "SWAPIStop\SWAPIStop.csproj", "{3F9043E3-CB2F-4799-8F63-09E568F9006E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWAPIStop", "SWAPIStop\SWAPIStop.csproj", "{3F9043E3-CB2F-4799-8F63-09E568F9006E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWAPIStop.Test", "SWAPIStop.Test\SWAPIStop.Test.csproj", "{FBAFE227-7F99-4B2C-BCD3-DE565446734E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3F9043E3-CB2F-4799-8F63-09E568F9006E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F9043E3-CB2F-4799-8F63-09E568F9006E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F9043E3-CB2F-4799-8F63-09E568F9006E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBAFE227-7F99-4B2C-BCD3-DE565446734E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBAFE227-7F99-4B2C-BCD3-DE565446734E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBAFE227-7F99-4B2C-BCD3-DE565446734E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBAFE227-7F99-4B2C-BCD3-DE565446734E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

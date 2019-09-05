@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using SWAPIStop.Utilities;
+using System;
+using System.Threading.Tasks;
 
 namespace SWAPIStop
 {
@@ -6,7 +9,16 @@ namespace SWAPIStop
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var collection = new ServiceCollection();
+            collection.AddHttpClient();
+            collection.AddTransient<SWAPIClient>();
+
+            var serviceProvider = collection.BuildServiceProvider();
+            var service = serviceProvider.GetService<SWAPIClient>();
+
+            Task.Run(async () => await service.GetStarshipData());
+
+            Console.ReadKey();
         }
     }
 }
