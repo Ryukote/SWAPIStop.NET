@@ -22,13 +22,22 @@ namespace SWAPIStop
             var client = serviceProvider.GetService<SWAPIClient>();
             var handler = serviceProvider.GetService<StoppingHandler>();
 
-            var input = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Make numeric input (integer):");
+            int input;
 
-            Task.Run(async () =>
+            if(int.TryParse(Console.ReadLine(), out input))
             {
-                ICollection<Starship> data = await client.GetStarshipData();
-                handler.DisplayStops(input, data.ToList());
-            }).ConfigureAwait(false);
+                Task.Run(async () =>
+                {
+                    ICollection<Starship> data = await client.GetStarshipData();
+                    handler.DisplayStops(input, data.ToList());
+                }).ConfigureAwait(false);
+            }
+
+            else
+            {
+                Console.WriteLine("Your input is not valid.");
+            }
 
             Console.ReadKey();
         }

@@ -20,14 +20,14 @@ namespace SWAPIStop.Data
                 char[] separators = { ' ' };
                 var splitted = period.Split(separators);
 
-                var parsedValue = (PeriodEnumaration)Enum.Parse(typeof(PeriodEnumaration), NormalizePeriodName(splitted[1]));
+                var parsedValue = (PeriodEnumeration)Enum.Parse(typeof(PeriodEnumeration), NormalizePeriodName(splitted[1]));
 
                 return Convert.ToInt32(splitted[0]) * (int)parsedValue;
             }
 
             else
             {
-                var parsedValue = (PeriodEnumaration)Enum.Parse(typeof(PeriodEnumaration), NormalizePeriodName(period));
+                var parsedValue = (PeriodEnumeration)Enum.Parse(typeof(PeriodEnumeration), NormalizePeriodName(period));
 
                 return (int)parsedValue;
             }

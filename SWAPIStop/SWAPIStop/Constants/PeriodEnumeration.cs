@@ -1,6 +1,6 @@
 ﻿namespace SWAPIStop.Constants
 {
-    public enum PeriodEnumaration
+    public enum PeriodEnumeration
     {
         Day = 1,
         Days = 1,

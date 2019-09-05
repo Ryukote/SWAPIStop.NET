@@ -30,6 +30,7 @@ namespace SWAPIStop.Test
 
             var result = await client.GetStarshipData();
 
+            Assert.NotNull(result);
             Assert.True(result.Count == 37);
         }
 
@@ -42,6 +43,7 @@ namespace SWAPIStop.Test
 
             var result = await client.GetStarshipData();
 
+            Assert.NotNull(result);
             Assert.Equal(2190, handler.PeriodToDays(result.ToList()[0].Consumables));
         }
 
@@ -59,6 +61,7 @@ namespace SWAPIStop.Test
             var convertedConsumables = handler.PeriodToDays(milleniumFalcon.Consumables);
             var milleniumFalconStops = handler.NumberOfStops(1000000, Convert.ToInt32(milleniumFalcon.MGLT), convertedConsumables);
 
+            Assert.NotNull(result);
             Assert.Equal(9, milleniumFalconStops);            
         }
     }
