@@ -40,6 +40,7 @@ namespace SWAPIStop.Data
 
         public void DisplayStops(int input, List<Starship> collection)
         {
+            int nonValidItems = 0;
             foreach(var item in collection)
             {
                 if(item.Consumables != "unknown" && item.MGLT != "unknown")
@@ -49,7 +50,14 @@ namespace SWAPIStop.Data
                     Console.WriteLine($"Number of stops: {stops}");
                     Console.WriteLine("-------------------------");
                 }
+
+                else
+                {
+                    nonValidItems++;
+                }
             }
+
+            Console.WriteLine($"There were {nonValidItems} starships for which could not be determined how many stops they need for resupply to cover a given distance.");
         }
     }
 }
