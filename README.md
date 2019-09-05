@@ -19,27 +19,27 @@ https://swapi.co/api/starships/?page=1
 
 Response data is structured like this:
 
-"count" -> number of items in the collection
-"next" -> url to the next page
-"previous" -> url to the previous page
-"results" -> array of JSON objects:
-    - "name" -> name of the starship
-    - "model" -> starship model
-    - "manufacturer" -> who manufactured this starship
-    - "cost_in_credits" -> starship price
-    - "max_atmosphering_speed" -> maximum starship speed
-    - "crew" -> number of personal on the starship
-    - "passengers" -> number of passengers
-    - "cargo_capacity" -> capacity of cargo in unknown measuring unit
-    - "consumables" -> number of consumables
-    - "hyperdrive_rating" -> rating of the hyperdrive
-    - "MGLT" -> stands for "mega light", which is a standard unit of distance in space (in Star Wars). It is often used in sublight speed measurement (example: 100 MGLT per hour)
-    - "starship_class" -> type of starship
-    - "pilots" -> list of url that represent pilot details
-    - "films" -> list of url that represent movie details in which this starship have appeared
-    - "created" -> creation time
-    - "edited" -> editing time
-    - "url" -> url to this starship (last parameter of url is starship id)
+- "count": number of items in the collection
+- "next": url to the next page
+- "previous": url to the previous page
+- "results": array of JSON objects:
+    - "name": name of the starship
+    - "model": starship model
+    - "manufacturer": who manufactured this starship
+    - "cost_in_credits": starship price
+    - "max_atmosphering_speed": maximum starship speed
+    - "crew": number of personal on the starship
+    - "passengers": number of passengers
+    - "cargo_capacity": capacity of cargo in unknown measuring unit
+    - "consumables": number of consumables
+    - "hyperdrive_rating": rating of the hyperdrive
+    - "MGLT": stands for "mega light", which is a standard unit of distance in space (in Star Wars). It is often used in sublight speed measurement (example: 100 MGLT per hour)
+    - "starship_class": type of starship
+    - "pilots": list of url that represent pilot details
+    - "films": list of url that represent movie details in which this starship have appeared
+    - "created": creation time
+    - "edited": editing time
+    - "url": url to this starship (last parameter of url is starship id)
 
 ## Project details
 
