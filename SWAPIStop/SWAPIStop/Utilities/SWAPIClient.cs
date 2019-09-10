@@ -29,10 +29,9 @@ namespace SWAPIStop.Utilities
             {
                 response = await client.GetAsync(Url.GetStarships + counter);
 
-                var json = await response.Content.ReadAsStringAsync();
-
-                if (!json.Contains("Not found"))
+                if (response.StatusCode != HttpStatusCode.NotFound)
                 {
+                    var json = await response.Content.ReadAsStringAsync();
                     var result = JsonConvert.DeserializeObject<SWAPIJson>(json);
 
                     foreach (var item in result.Result)
